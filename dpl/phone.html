@@ -1,0 +1,487 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>大米</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <style>
+        html, body {
+            position: relative;
+            height: 100vw;
+
+        }
+        
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            color:#000;
+            margin: 0;
+            padding: 0;
+        }
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-slide {
+            text-align: center;
+            font-size: 1.8rem;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            flex-direction: column;
+
+        }
+
+        /*-----------第一页---------*/
+        .my-slidehome{
+            flex-flow: column;
+        }
+        .u-arrow-bottom{
+            width: 24px;
+            height: 14px;
+            position: absolute;
+            left: 48%;
+            bottom:20px;
+            z-index: 9999;
+
+        }
+        @-webkit-keyframes start {
+            0%, 30% {
+                opacity: 0;
+                -webkit-transform: translate(0, 10px)
+            }
+            60% {
+                opacity: 1;
+                -webkit-transform: translate(0, 0)
+            }
+            100% {
+                opacity: 0;
+                -webkit-transform: translate(0, -8px)
+            }
+        }
+
+        @-moz-keyframes start {
+            0%, 30% {
+                opacity: 0;
+                -moz-transform: translate(0, 10px)
+            }
+            60% {
+                opacity: 1;
+                -moz-transform: translate(0, 0)
+            }
+            100% {
+                opacity: 0;
+                -moz-transform: translate(0, -8px)
+            }
+        }
+
+        @keyframes start {
+            0%, 30% {
+                opacity: 0;
+                transform: translate(0, 10px)
+            }
+            60% {
+                opacity: 1;
+                transform: translate(0, 0)
+            }
+            100% {
+                opacity: 0;
+                transform: translate(0, -8px)
+            }
+        }
+
+        .pre-wrap {
+            width: 24px;
+            height: 14px;
+            position: relative;
+            /*-webkit-animation: start 1.5s infinite ease-in-out;
+            -moz-animation: start 1.5s infinite ease-in-out;
+            animation: start 1.5s infinite ease-in-out*/
+        }
+
+        .pre-box1, .pre-box2 {
+            height: 15px;
+            width: 11px;
+            position: absolute;
+            top: -5px;
+            left:-1px;
+            overflow: hidden;
+
+        }
+
+        .pre-box2 {
+            left: 10px
+        }
+
+        .pre1, .pre2 {
+            width: 14px;
+            height: 5px;
+            position: absolute;
+            top: 5px;
+            background: #dcdcdc;
+        }
+
+        .pre1 {
+            transform: rotate(130deg);
+            -webkit-transform: rotate(130deg);
+            left: 1px
+        }
+
+        .pre2 {
+            left: -4.5px;
+            -webkit-transform: rotate(50deg);
+            transform: rotate(50deg)
+        }
+        .andbtn{
+            display: block;
+            outline: none;
+            border: 0;
+            background-size: 100%;        
+            -webkit-tap-highlight-color:transparent;
+            position: absolute;
+            z-index: 10;
+        }
+        .slidehome-top{     
+            background:url(../images/background1.png);           
+            background-repeat: repeat-y;
+            background-size:100% auto;
+            background-position-y: 0px;
+            -webkit-animation: scrollTop 70s infinite alternate;
+            -moz-animation: scrollTop 70s infinite alternate;
+            -ms-animation: scrollTop 70s infinite alternate;
+            -moz-animation:scrollTop 70s infinite alternate;
+        }
+        .star-discovered{
+            background: url(../images/star1.png)no-repeat;
+            background-size:100%;
+        }
+        .star-keep{
+            background: url(../images/star2.png)no-repeat;
+            background-size:100%;
+        }
+        .star-cleared{
+            background: url(../images/star3.png)no-repeat;
+            background-size:100%;
+        }
+        .star-share{
+            background: url(../images/star4.png)no-repeat;
+            background-size:100%;
+        }
+
+
+        #popweixin {
+            width:100%;
+            height:100%;
+            overflow:hidden;
+            position:fixed;
+            z-index:1000;
+            background:rgba(0,0,0,.5);
+            top:0;
+            left:0;
+            display:none;
+        }
+        #popweixin .tip {
+            width:100%;
+            background:#fff;
+            z-index:1001;
+        }
+        .know-btn{
+            display: inline-block;
+            line-height:0;
+            vertical-align:top;
+            float:right;
+        }
+        .top2bottom {
+            -webkit-animation:top2bottom 1.2s ease;
+            -moz-animation:top2bottom 1.2s ease;
+            -o-animation:top2bottom 1.2s ease;
+            animation:top2bottom 1.2s ease;
+            -webkit-animation-fill-mode:backwards;
+            -moz-animation-fill-mode:backwards;
+            -o-animation-fill-mode:backwards;
+            animation-fill-mode:backwards
+        }
+        .animate-delay-1 {
+            -webkit-animation-delay:1s;
+            -moz-animation-delay:1s;
+            -o-animation-delay:1s;
+            animation-delay:1s
+        }
+        .logoWrapper{
+        	margin-top:-8.4rem;
+        	z-index: 5;
+        	width:5.3rem;
+        	height: 6.2rem;
+        	background:url(../images/word.png) no-repeat;
+        	background-size: 100%;
+        }
+        .controduce{
+        	display: inline-block;
+        	width:1rem;
+        	height:1rem; 
+        	vertical-align: middle;  
+        
+        	float: left;      	
+        }
+        .controduce img{
+        	width:100%;
+        	color: #555555;       	
+        	font-family: "黑体";
+        	float: left;
+        	
+        	
+        }
+        .title{
+    	    font-size: 0.6rem;		    
+		    float:left;
+		    display: inline-block;
+		    vertical-align: middle;
+		    margin-left: 0.3rem;
+		    margin-top: 0.16rem;
+        }
+        @-webkit-keyframes top2bottom {
+            0% {
+                -webkit-transform:translateY(-300px);
+                opacity:.6
+            }
+            100% {
+                -webkit-transform:translateY(0px);
+                opacity:1
+            }
+        }@keyframes top2bottom {
+             0% {
+                 transform: translateY(-300px);
+                 opacity: .6
+             }
+             100% {
+                 transform: translateY(0px);
+                 opacity: 1
+             }
+         }  
+         .loadA{
+            position: absolute;
+            bottom:0vw;
+            height: 38%;
+            width: 100vw;
+            z-index:11;
+         }
+         .backImg{
+            display:inline-block;
+            width: 100vw;
+            height:177.5vw;
+         }
+         #storeButton{
+            width: 11.3rem;
+            height: 24%;
+            top: .7vw;
+            left: 2.4rem;
+        }
+        #storeButtonAndroid{
+            width: 11.3rem;
+            height: 24%;
+            top: 36%;
+            left: 2.4rem;
+        }
+        .footImg{
+            width:17vw;
+            position: absolute;
+            bottom:3%;
+            left: 41.5vw;
+        }
+    </style>
+
+</head>
+<body>
+<!-- Swiper -->
+<div class="swiper-container">
+    <div class="header">
+            <span class="icon-back"></span>
+            <span class="icon-more"></span>
+        </div>
+    <div class="swiper-wrapper">
+        <div class="swiper-slide slidehome-top">
+            <img src="../images/backRICE.png" alt="" class="backImg">
+            <div class="loadA">
+                <a id="storeButton" href="javaScript:;"  class="andbtn"></a>
+                <a id="storeButtonAndroid" href="javaScript:;"  class="andbtn"></a> 
+            </div>
+            <img src="../images/footv10.png" alt="" class="footImg">                
+        </div>
+    </div>
+</div>
+<div id='popweixin'>
+    <div class='tip top2bottom animate-delay-1'>
+        <img src='../images/wechat_appstore_popup.png' style="width:50%;float: right; margin-right:20px;"/>
+        <a href="javascript:;" class="know-btn" id="know-btn">
+            <img src="../images/know.png" alt="" style="width: 50%;"/>
+        </a>
+    </div>
+</div>
+<!-- Swiper JS -->
+<script src="../js/swiper.min.js"></script>
+<script src="../js/zepto.min.js"></script>
+<script>
+	var url = "";
+	var ua = navigator.userAgent.toLowerCase();
+	$(function(){
+
+		if (/iphone|ipod/.test(ua)) {
+			if(/micromessenger/.test(ua)){
+				document.getElementById("popweixin").style.display = "block";
+			}
+		}
+	});
+	$("#know-btn").on("click",function(){
+	   document.getElementById("popweixin").style.display = "none";
+	})
+
+	var link =document.getElementById("storeButton");
+    var Android =document.getElementById("storeButtonAndroid");
+	var type ="unknown";
+
+	if(navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+        console.log("apple")
+		
+		$('#storeButton').on('click',function(){
+            window.location.href = 'https://itunes.apple.com/app/id1166088865';
+		});
+
+	} else if (navigator.userAgent.match(/Android/i)) {
+        console.log("android");
+
+        Android.href="http://a.app.qq.com/o/simple.jsp?pkgname=com.ledaonetwork.up";
+		   
+	}     
+
+</script>
+<!-- Initialize Swiper -->
+<script>
+
+    function fixPagesHeight() {
+        $('.swiper-slide,.swiper-container').css({
+            height: $(window).height()
+        })
+    }
+    $(window).on('resize', function() {
+        fixPagesHeight();
+    })
+    fixPagesHeight();
+
+// 实现上下滑动
+ var mySwiper = new Swiper('.swiper-container', {
+
+     direction: 'vertical',
+     mousewheelControl: true,
+     watchSlidesProgress: true,
+     onInit: function(swiper) {
+         swiper.myactive = 0;
+
+     },
+     onProgress: function(swiper) {
+         for (var i = 0; i < swiper.slides.length; i++) {
+             var slide = swiper.slides[i];
+             var progress = slide.progress;
+             var translate, boxShadow;
+
+             translate = progress * swiper.height * 0.8;
+             scale = 1 - Math.min(Math.abs(progress * 0.2), 1);
+             boxShadowOpacity = 0;
+
+             slide.style.boxShadow = '0px 0px 10px rgba(0,0,0,' + boxShadowOpacity + ')';
+
+             if (i == swiper.myactive) {
+                 es = slide.style;
+                 es.webkitTransform = es.MsTransform = es.msTransform = es.MozTransform = es.OTransform = es.transform = 'translate3d(0,' + (translate) + 'px,0) scale(' + scale + ')';
+                 es.zIndex=0;
+
+
+             }else{
+                 es = slide.style;
+                 es.webkitTransform = es.MsTransform = es.msTransform = es.MozTransform = es.OTransform = es.transform ='';
+                 es.zIndex=1;
+
+             }
+
+         }
+
+     },
+
+
+     onTransitionEnd: function(swiper, speed) {
+         for (var i = 0; i < swiper.slides.length; i++) {
+               	es = swiper.slides[i].style;
+               	es.webkitTransform = es.MsTransform = es.msTransform = es.MozTransform = es.OTransform = es.transform = '';
+
+               	swiper.slides[i].style.zIndex = Math.abs(swiper.slides[i].progress);
+
+
+         }
+
+         swiper.myactive = swiper.activeIndex;
+
+     },
+     onSetTransition: function(swiper, speed) {
+
+         for (var i = 0; i < swiper.slides.length; i++) {
+               if (i == swiper.myactive) {
+
+             es = swiper.slides[i].style;
+             es.webkitTransitionDuration = es.MsTransitionDuration = es.msTransitionDuration = es.MozTransitionDuration = es.OTransitionDuration = es.transitionDuration = speed + 'ms';
+               }
+         }
+
+     }
+
+ });
+//实现上下滑动
+
+    function resetFontSize(){
+        $('html').css('font-size', $('body').width()/16);
+    }
+    resetFontSize();
+    $(window).resize(function(){
+        resetFontSize();
+    });
+</script>
+<script type="text/javascript">
+    window.onload = function phoneload(){
+        var browser = {
+            versions: function () {
+                var u = navigator.userAgent, app = navigator.appVersion;
+                return {     //移动终端浏览器版本信息
+                    trident: u.indexOf('Trident') > -1, //IE内核
+                    presto: u.indexOf('Presto') > -1, //opera内核
+                    webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+                    gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+                    mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+                    ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                    android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
+                    iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+                    iPad: u.indexOf('iPad') > -1, //是否iPad
+                    webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+                };
+            }(),
+            language: (navigator.browserLanguage || navigator.language).toLowerCase()
+        }
+        // if (!browser.versions.mobile) {//判断是否是移动设备打开。browser代码在下面
+            // window.location = "window.html";
+        // } else {
+
+        // }
+    }
+</script>
+</body>
+</html>

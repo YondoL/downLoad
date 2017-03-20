@@ -1,0 +1,213 @@
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+}
+html {
+    height: 100%;
+    min-width: 1024px
+}
+body {
+    position: relative;
+    background: #fff;
+    font-size: 14px;
+    font-family: "微软雅黑","Helvetica Neue", Helvetica, "Microsoft YaHei", Arial, simsun, "宋体";
+    -webkit-font-smoothing: antialiased
+}
+ol, ul, li {
+    list-style: none;
+}
+h1{
+    font-size:36px;
+    display: inline-block;
+}
+h2{
+    font-size:30px;
+    color:#1e1e1e;
+}
+h3{
+    font-size:24px;
+    color:#000;
+    font-weight: normal;
+    margin-top:24px;
+}
+.container {
+    width:980px;
+    margin:0 auto;
+}
+
+.clearfix::after {
+    display: block;
+    clear: both
+}
+
+.pull-left {
+    float: left
+}
+
+.pull-right {
+    float: right
+}
+.star-logo{
+    display: block;
+    width:130px;
+    height:32px;
+    margin-top:42px;
+    background: url(../images/logo.png)no-repeat;
+}
+.star-text p{
+    font-size:20px;
+    color:#323232;
+}
+.star-nav{
+    position: relative;
+}
+.star-text{
+    margin-top:180px;
+    position: absolute;
+    top:-30px;
+    right:0;
+}
+.textfir{
+    margin-top:42px;
+}
+.textsed,.textthr,.textfou{
+    margin-top:22px;
+}
+.star-btn{
+    margin-top:24px;
+    position: relative;
+}
+.star-btn-and,.star-btn-iphone{
+    display: inline-block;
+}
+.star-btn-and{
+    margin-top:12px;
+}
+.star-btn-right{
+    position: absolute;
+    top: 0;
+    left: 39%;
+}
+.star-content{
+    height:512px;
+    position: relative;
+    background:#f0f0f0;
+    padding-top:64px;
+}
+.star-content h2{
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+.star-fun{
+    margin-top:60px;
+}
+.star-fun li{
+    width:20%;
+    float: left;
+    text-align: center;
+    margin-right:65px;
+}
+.star-fa{
+    position: relative;
+}
+.star-left{
+    width:30px;
+    display: inline-block;
+    border-top:1px solid #b4b4b4;
+    position: absolute;
+    top: 58%;
+    left: 42%
+}
+.star-right{
+    width:30px;
+    display: inline-block;
+    border-top:1px solid #b4b4b4;
+    position: absolute;
+    top: 58%;
+    left: 56%
+}
+.star-fun li:last-child{
+    margin-right:0px;
+}
+.star-fun p{
+    font-size:18px;
+    color:#848484;
+    text-align: center;
+}
+.star-redal{
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.star-footer{
+    height:130px;
+    line-height: 130px;
+    text-align: center;
+    font-size: 16px;
+    color: #323232;
+}
+.star-foot-retive{
+    position: relative;
+}
+.star-sns{
+    position: absolute;
+    top:72px;
+    right:0;
+}
+.star-sns a:first-child{
+    margin-right:30px;
+}
+.star-sns a{
+    display: inline-block;
+    position: relative;
+}
+.star-sns a img{
+    width: 29px;
+    height: 29px;
+}
+.star-a:hover .star-encode{
+    display: block;
+}
+.star-encode{
+    display: none;
+    position: absolute;
+    height: 110px;
+    width: 110px;
+    top: -120px;
+    left: 50%;
+    margin-left: -55px;
+    box-shadow: 0 0 7px 0 rgba(0,0,0,.5);
+    border-radius: 3px;
+    padding: 5px;
+    background:red;
+    background-size: contain;
+}
+.star-encode::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -6px;
+    border-top: 10px solid #fff;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+}
+.star-class{
+    font-size:16px;
+    color:#323232;
+    margin:0 auto;
+    padding-top:72px;
+    text-align: center;
+
+}

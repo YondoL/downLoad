@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+    <meta name="keywords" content="星星,自由表达,尽情分享">
+    <meta name="description" content="星星,给人启发的兴趣社区">
+    <link rel="stylesheet" href="../css/index.css"/>
+    <title>大米</title>
+</head>
+<body>
+<div class="star-header">
+    <div class="container">
+        <!-- <a href="../index.html" class="star-logo"></a> -->
+    </div>
+</div>
+<div class="star-nav container">
+    <div class="star-phone">
+        <img src="../images/phone.png" alt=""/>
+    </div>
+    <div class="star-text  clearfix">
+        <h1>尽情分享,自由表达！</h1>
+        <p class="textfir">基于APP及PC端阅读信息的保存、查询及与他人共享</p>
+        <p class="textsed">碎片信息收录、整合、方便二次阅读</p>
+        <p class="textthr">精确搜索，匹配全网用户收录的优质信息</p>
+        <p class="textfou">收录共享，遇到志趣相投的知己</p>
+        <!-- 按钮区-->
+        <div class="star-btn">
+            <div class="star-btn-left">
+                <div class="star-btn-iphone">
+                    <a href="https://itunes.apple.com/app/id1166088865">
+                        <img src="../images/iphone.png"  alt=""/>
+                    </a>
+
+                </div>
+                <div class="star-btn-and">
+                    <div>
+                        <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.ledaonetwork.up">
+                            <img src="../images/android.png"  alt=""/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- 扫码区-->
+            <!--<div  class="star-btn-right">-->
+                <!--<div style="width:100px; height:100px; background: #000;">-->
+
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+
+    </div>
+</div>
+<div class="star-content">
+    <div class="star-fa">
+        <span class="star-left"></span>
+        <h2>功能介绍</h2>
+        <span class="star-right"></span>
+    </div>
+    <ul class="star-fun container">
+        <li>
+            <img src="../images/discovered.png" alt=""/>
+            <h3>发现</h3>
+            <div class="star-redal">
+                <img src="../images/redal.png" alt=""/>
+            </div>
+            <p>发现精彩</p>
+            <p>精选优质内容</p>
+
+        </li>
+        <li>
+            <img src="../images/keep.png" alt=""/>
+            <h3>收录</h3>
+            <div class="star-redal">
+                <img src="../images/redal.png" alt=""/>
+            </div>
+            <p>一键收录</p>
+            <p>留住不期而遇的美好</p>
+
+        </li>
+        <li>
+            <img src="../images/cleared.png" alt=""/>
+            <h3>整合</h3>
+            <div class="star-redal">
+                <img src="../images/redal.png" alt=""/>
+            </div>
+            <p>内容整合</p>
+            <p>撰写你的百科全书</p>
+
+        </li>
+        <li>
+            <img src="../images/share.png" alt=""/>
+            <h3>共享</h3>
+            <div class="star-redal">
+                <img src="../images/redal.png" alt=""/>
+            </div>
+            <p>你的共享</p>
+            <p>他的收藏</p>
+
+        </li>
+    </ul>
+</div>
+<div class="star-footer">
+    <div class="star-foot-retive container">
+        北京乐享无线科技有限公司 | 京ICP备15039724号-2
+        <!-- <div class="star-sns">
+            <a class="star-a">
+                <img src="../images/weix.png" alt=""/>
+                <div class="star-encode"></div>
+            </a>
+            <a href="#">
+                <img src="../images/weib.png" alt=""/>
+            </a>
+        </div>
+        <p class="star-class"></p>
+        <p></p> -->
+    </div>
+</div>
+
+<script type="text/javascript">
+    var browser = {
+        versions: function () {
+            var u = navigator.userAgent, app = navigator.appVersion;
+            return {     //移动终端浏览器版本信息
+                trident: u.indexOf('Trident') > -1, //IE内核
+                presto: u.indexOf('Presto') > -1, //opera内核
+                webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+                gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+                mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+                ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
+                iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+                iPad: u.indexOf('iPad') > -1, //是否iPad
+                webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+            };
+        }(),
+        language: (navigator.browserLanguage || navigator.language).toLowerCase()
+    }
+    if (browser.versions.mobile) {//判断是否是移动设备打开。browser代码在下面
+        window.location.href = "phone.html";
+
+    } else {
+
+    }
+
+</script>
+</body>
+</html>
